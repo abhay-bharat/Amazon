@@ -176,6 +176,7 @@ class inventory:
     def delete_product_in_inventory(self, product_id):
         try:
             product_id = int(product_id)
+            cart1.remove_product_in_cart(product_id)
             # product_id = int(input("Enter the product Id of the product to be deleted: "))
             self.inventory_products.pop(product_id)
             print("Product with Id = ", product_id, " deleted")
